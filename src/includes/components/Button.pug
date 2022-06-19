@@ -1,0 +1,21 @@
+mixin Button({ title, icon, styleType = 'btn-primary', className = '', type = 'button', link, iconReverse, disabled })
+  if (link)
+    a(href=`${link}` class=`btn ${styleType} ${className}`)
+      = title
+      if (icon)
+        i(class=`${icon}`)
+
+  else if (disabled)
+    button(type=`${type}` class=`btn ${styleType} ${className}` disabled)
+      if (icon && iconReverse)
+        i(class=`${icon}`)
+      = title
+      if (icon && !iconReverse)
+        i(class=`${icon}`)
+  else
+    button(type=`${type}` class=`btn ${styleType} ${className}`)
+      if (icon && iconReverse)
+        i(class=`${icon}`)
+      = title
+      if (icon && !iconReverse)
+        i(class=`${icon}`)

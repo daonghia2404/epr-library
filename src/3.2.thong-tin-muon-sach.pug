@@ -1,0 +1,10 @@
+extends includes/layouts/Layout.pug
+
+block sidebar 
+  +Sidebar()
+
+block header 
+  +Header({ title: 'Thông tin đơn mượn' })
+
+block pages
+  include includes/containers/BorrowInfo.pug

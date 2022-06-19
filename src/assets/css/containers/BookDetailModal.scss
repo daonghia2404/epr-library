@@ -1,0 +1,68 @@
+.BookDetailModal {
+  .modal-body {
+    padding: 0;
+  }
+
+  &-main {
+    &-item {
+      &:first-child {
+        padding: 24px;
+        flex: 0 0 370px;
+        max-width: 370px;
+      }
+
+      &:last-child {
+        flex: 1;
+      }
+
+      @media (max-width: 991px) {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+      }
+    }
+  }
+
+  &-image {
+    width: 270px;
+    height: 390px;
+    margin: 0 auto 40px;
+    @include centerOriginImage();
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-feature {
+    width: 100%;
+
+    .btn {
+      flex: 0 0 calc(100% / 3 - 4px);
+      max-width: calc(100% / 3 - 4px);
+
+      @media (max-width: 575px) {
+        flex: 0 0 100%;
+        max-width: 100%;
+
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+
+  &-add-cart {
+    padding: 24px 28px;
+  }
+
+  &-content {
+    padding: 24px 28px;
+    height: 460px;
+    overflow: auto;
+
+    @media (max-width: 991px) {
+      height: auto;
+    }
+  }
+}

@@ -1,0 +1,75 @@
+<div class="BookDetailModal modal fade" id="BookDetailModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        .BookDetailModal-main.d-flex.flex-wrap-reverse
+          .BookDetailModal-main-item.border-end.d-flex.flex-column.align-items-center.justify-content-center
+            .BookDetailModal-image 
+              img(src="./assets/img/image-sample-book.png" alt="")
+            .BookDetailModal-feature.d-flex.justify-content-between
+              +Button({ title: 'Sách in', styleType: 'btn-success', className: 'btn-sm', iconReverse: true, icon: 'me-2 bi-check-circle-fill' })
+              +Button({ title: 'Epub', styleType: 'btn-outline-secondary', className: 'btn-sm', disabled: true, iconReverse: true, icon: 'me-2 bi-x-circle-fill' })
+              +Button({ title: 'Pdf', styleType: 'btn-outline-secondary', className: 'btn-sm', disabled: true, iconReverse: true, icon: 'me-2 bi-x-circle-fill' })
+
+          .BookDetailModal-main-item
+            .BookDetailModal-add-cart.border-bottom.d-flex.align-items-center.justify-content-between
+              .BookDetailModal-add-cart-btn
+                +Button({ title: 'Thêm vào giỏ ', styleType: 'btn-success' })
+
+              .BookDetailModal-close
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+            .BookDetailModal-content 
+              h3.mb-4 Quy trình pháp lý thu hồi đất, trưng dụng đất, bồi thường, hỗ trợ tái định cư và giải quyết khiếu nại, tố cáo, khởi kiện của người có đất thu hồi, trưng dụng
+
+              <div class="card mb-4 overflow-hidden">
+                <div class="card-header">
+                  <h4 class="card-header-title">Giới thiệu nội dung</h4>
+                </div>
+                <div class="card-body" style="padding: 0; overflow: auto;">
+                  <table class="table table-striped table-thead-bordered table-align-middle card-table" data-hs-datatables-options='{ "isResponsive": true, "isShowPaging": false }'>
+                    <tbody>
+                      tr 
+                        td
+                          span #[strong NXB]: Nhà xuất bản Xây dựng
+                        td
+                          span #[strong Người dịch]: Nguyễn Cường, Trương Hồng Sơn
+
+                      tr 
+                        td
+                          span #[strong Năm XB]: 2019
+                        td
+                          span #[strong Loại sách]: Ebook; Sách giấy, Audio Book
+
+                      tr 
+                        td
+                          span #[strong Số trang]: 202 trang
+                        td
+                          span #[strong Kt bìa]: 18x25cm
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+
+              <div class="card mb-4">
+                <div class="card-header">
+                  <h4 class="card-header-title">Giới thiệu nội dung</h4>
+                </div>
+                <div class="card-body">
+                  p.card-text Tư duy phản biện là chìa khóa để bạn thoát khỏi những lối mòn trong suy nghĩ, giúp bạn giải quyết các vấn đề khó khăn một cách sáng tạo và hiệu quả hơn. Cuốn sách "Tư duy phản biện" được viết bởi chuyên gia đào tạo Zoe McKey sẽ giúp bạn khai phá được sức mạnh trí óc của mình. Tác phẩm chứa đựng những bí quyết và chiến lược của các cá nhân thành công nhất, giúp người đọc có thể:
+                  p.card-text - Khám phá chiều sâu tư duy
+                  p.card-text - Đánh thức trí sáng tạo
+                  p.card-text - Nắm bắt được cơ hội
+                  p.card-text - Không ngại mơ ước
+                  p.card-text - Vượt qua sự lo lắng
+                  p.card-text - Quản lí thời gian hiệu quả
+                  p.card-text Đọc xong tác phẩm, trực giác của bạn sẽ được mài sắc một cách rõ rệt, nhờ vậy khả năng đánh giá và đưa ra quyết định cũng được cải thiện, giúp bạn tự tin hơn trong mọi hành động.
+                  p.card-text Nếu đủ động lực để thực hành các phương pháp trong “Tư duy phản biện”, bạn sẽ học được một lối tư duy có định hướng, tập trung, kỉ luật và tự chủ. Bạn sẽ biết cách phân tích các tình huống từ nhiều góc độ khác nhau, không vội vàng đưa ra những kết luận sai lầm và chủ quan, có cái nhìn đúng đắn hơn với các hiện tượng trong cuộc sống, và không còn phải hối tiếc với các quyết định và hành xử của mình.
+                </div>
+              </div>
+
+      </div>
+    </div>
+  </div>
+</div>

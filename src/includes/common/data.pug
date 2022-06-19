@@ -1,0 +1,123 @@
+-
+  const dataMenuSidebar = {
+    mainId: 'navbarVerticalMenu',
+    groups: [
+      {
+        groupId: 'navbarVerticalMenuSearchMenu',
+        title: '',
+        menu: [
+          {
+            id: 'navbarVerticalMenuSearchMenuSearch',
+            link: '#navbarVerticalMenuSearchMenuSearch',
+            title: 'Tra cứu sách thư viện',
+            icon: 'bi-search',
+            children: [],
+          },
+        ],
+      },
+      {
+        groupId: 'navbarVerticalMenuFeature',
+        title: 'Tính năng',
+        menu: [
+          {
+            id: 'navbarVerticalMenuFeatureBorrowAndPay',
+            link: '#navbarVerticalMenuFeatureBorrowAndPay',
+            title: 'Quản lý mượn trả',
+            icon: 'bi-grid',
+            children: [],
+          },
+          {
+            id: 'navbarVerticalMenuFeatureBooks',
+            link: '#navbarVerticalMenuFeatureBooks',
+            title: 'Quản lý sách',
+            icon: 'bi-journal-bookmark',
+            children: [],
+          },
+          {
+            id: 'navbarVerticalMenuFeatureBorrowBook',
+            link: '#navbarVerticalMenuFeatureBorrowBook',
+            title: 'Mượn sách',
+            active: true,
+            icon: 'bi-book',
+            children: [
+              {
+                link: '#',
+                title: 'Quản lý sách',
+                active: true,
+              },
+              {
+                link: '#',
+                title: 'Danh mục',
+              },
+            ],
+          },
+          {
+            id: 'navbarVerticalMenuFeaturePosition',
+            link: '#navbarVerticalMenuFeaturePosition',
+            title: 'Quản lý vị trí',
+            icon: 'bi-geo-alt',
+            children: [],
+          },
+          {
+            id: 'navbarVerticalMenuFeatureReport',
+            link: '#navbarVerticalMenuFeatureReport',
+            title: 'Báo cáo thống kê',
+            icon: 'bi-bar-chart',
+            children: [],
+          },
+          {
+            id: 'navbarVerticalMenuFeatureReader',
+            link: '#navbarVerticalMenuFeatureReader',
+            title: 'Quản lý độc giả',
+            icon: 'bi-person',
+            children: [
+              {
+                link: '#',
+                title: 'Người đọc',
+              },
+              {
+                link: '#',
+                title: 'Người xem',
+              },
+            ],
+          },
+          {
+            id: 'navbarVerticalMenuFeatureDocument',
+            link: '#navbarVerticalMenuFeatureDocument',
+            title: 'Quản lý tài liệu',
+            icon: 'bi-file-earmark',
+            children: [],
+          },
+          {
+            id: 'navbarVerticalMenuFeatureSchool',
+            link: '#navbarVerticalMenuFeatureSchool',
+            title: 'Thông tin trường',
+            icon: 'bi-house-door',
+            children: [],
+          },
+          {
+            id: 'navbarVerticalMenuFeatureLibrary',
+            link: '#navbarVerticalMenuFeatureLibrary',
+            title: 'Quản lý thư viện',
+            icon: 'bi-journal-richtext',
+            children: [],
+          },
+          {
+            id: 'navbarVerticalMenuFeatureStorage',
+            link: '#navbarVerticalMenuFeatureStorage',
+            title: 'Quản lý kho',
+            icon: 'bi-house',
+            children: [],
+          },
+        ],
+      },
+    ],
+  }
+
+  const dataPageSizeOptions = [
+    { label: '10 dòng', value: 10 },
+    { label: '25 dòng', value: 25 },
+    { label: '50 dòng', value: 50 },
+    { label: '75 dòng', value: 75 },
+    { label: '100 dòng', value: 100 },
+  ]

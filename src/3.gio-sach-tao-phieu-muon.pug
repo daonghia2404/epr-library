@@ -1,0 +1,118 @@
+extends includes/layouts/Layout.pug
+
+block sidebar 
+  +Sidebar()
+
+block header 
+  +Header({ title: 'Giỏ sách - Tạo phiếu mượn' })
+
+block pages
+  .row 
+    .col-lg-8.col-12
+      <div class="card overflow-hidden border-0 mb-4 mb-lg-0">
+        <div class="table-responsive datatable-custom">
+          <table id="datatbleWithFilter" class="js-datatable table table-thead-nowrap table-bordered table-align-middle card-table" data-hs-datatables-options='{ "columnDefs": [{ "targets": [1], "orderable": false }], "order": [], "search": "#datatableWithFilterSearch", "isResponsive": true, "isShowPaging": false }'>
+            <thead class="thead-light">
+              <tr>
+                <th>#</th>
+                <th class="text-center">Ảnh bìa</th>
+                <th>Tên Sách</th>
+                <th>Số lượng</th>
+                <th class="text-center">Thao tác</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              each item in [1,2,3,4,5,6,7,8,9,10]
+                tr 
+                  td= `#${item}`
+                  td
+                    img.mb-2.mx-auto.d-block.mw-100(src="./assets/img/image-sample-book.png" alt="")
+
+                  td Những Kỳ Vọng Lớn Lao - Charles Dickens
+                  td 1
+                  td 
+                    .row.justify-content-center
+                      <span class="icon icon-sm mx-1 icon-soft-danger hover-icon-soft-danger">
+                        <i class="bi-trash"></i>
+                      </span>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    .col-lg-4.col-12
+      <div class="card position-sticky" style="top: 70px;">
+        <div class="card-header">
+          .d-flex.justify-content-between.align-items-center
+            h5.mb-0 TẠO PHIẾU MƯỢN
+            .d-flex
+              div(data-bs-toggle="modal" data-bs-target="#BorrowBooksSuccessModal")
+                +Button({ title: 'Tạo', className: 'btn-sm ms-2' })
+              div
+                +Button({ title: 'Huỷ', styleType: 'btn-light', className: 'btn-sm ms-2' })
+
+        </div>
+
+        <form class="p-3">
+          <div class="mb-3">
+            <label class="form-label" for="name">Họ và tên</label>
+            <div class="input-group">
+              <span class="input-group-text" id="nameAddon">
+                i.bi-person
+              </span>
+              <input id="name" type="text" class="form-control" placeholder="Nhập Họ và tên" aria-label="Nhập Họ và tên" aria-describedby="nameAddon">
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label" for="phone">Số điện thoại</label>
+            <div class="input-group">
+              <span class="input-group-text" id="phoneAddon">
+                i.bi-telephone
+              </span>
+              <input id="phone" type="text" class="form-control" placeholder="Nhập Số điện thoại" aria-label="Nhập Số điện thoại" aria-describedby="phoneAddon">
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label" for="email">Email</label>
+            <div class="input-group">
+              <span class="input-group-text" id="emailAddon">
+                i.bi-envelope
+              </span>
+              <input id="email" type="text" class="form-control" placeholder="Nhập Email" aria-label="Nhập Email" aria-describedby="emailAddon">
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label" for="dateBorrow">Ngày mượn</label>
+            <div class="input-group">
+              <span class="input-group-text" id="dateBorrowAddon">
+                i.bi-calendar
+              </span>
+              <input type="text" class="js-flatpickr form-control" placeholder="Nhập Ngày mượn" aria-label="Nhập Ngày mượn" aria-describedby="dateBorrowAddon" data-hs-flatpickr-options='{ "dateFormat": "d/m/Y" }'>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label" for="dateReturn">Ngày trả</label>
+            <div class="input-group">
+              <span class="input-group-text" id="dateReturnAddon">
+                i.bi-calendar-check
+              </span>
+              <input type="text" class="js-flatpickr form-control" placeholder="Nhập Ngày trả" aria-label="Nhập Ngày trả" aria-describedby="dateReturnAddon" data-hs-flatpickr-options='{ "dateFormat": "d/m/Y" }'>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label" for="note">Ghi chú</label>
+            <div class="input-group">
+              <textarea id="note" class="form-control" placeholder="Nhập Ghi chú" aria-label="Nhập Ghi chú"></textarea>
+            </div>
+          </div>
+        </form>
+      </div>
+
+  include includes/containers/BorrowBooksSuccessModal.pug

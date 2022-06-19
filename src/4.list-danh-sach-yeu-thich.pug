@@ -1,0 +1,19 @@
+extends includes/layouts/Layout.pug
+
+block sidebar 
+  +Sidebar()
+
+block header 
+  +Header({ title: 'Danh sách sách yêu thích' })
+
+block pages
+  .row 
+    each item in [1,2,3,4,5,6,7,8,9,10,11,12]
+      .col-lg-2.col-md-3.col-sm-4.col-6
+        +BookBlock({ title: 'Bố Già - Mario Puzo', image: './assets/img/image-sample-book.png', isFavorite: true })
+
+  .d-flex.justify-content-end.mt-2 
+    +Pagination({})
+
+  include includes/containers/BookDetailModal.pug
+  

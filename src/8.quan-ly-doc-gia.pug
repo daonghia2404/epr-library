@@ -1,0 +1,147 @@
+extends includes/layouts/Layout.pug
+
+block sidebar 
+  +Sidebar()
+
+block header 
+  +Header({ title: 'Quản lý độc giả' })
+
+block pages
+  <div class="card">
+    <div class="card-header">
+      <div class="row justify-content-between align-items-center flex-grow-1">
+        <div class="col-md-auto">
+          <div class="row align-items-center">
+            <div class="col-auto mb-2">
+              <form>
+                <div class="input-group-sm input-group-merge">
+                  <div class="input-group-prepend input-group-text">
+                    <i class="bi-search"></i>
+                  </div>
+
+                  <input type="text" class="js-form-search form-control" placeholder="Nhập từ khóa" aria-label="Nhập từ khóa" data-hs-form-search-options='{ "clearIcon": "#clearSearchResultsTable",  "toggleIconOnFocus": true, "activeClass": "focus" }'>
+
+                  <a class="input-group-append input-group-text" href="javascript:;">
+                    <i id="clearSearchResultsTable" class="bi-x-lg" style="display: none;"></i>
+                  </a>
+                </div>
+              </form>
+            </div>
+
+            <div class="col-auto mb-2">
+              <div class="tom-select-custom">
+                <select class="js-select js-datatable-filter form-select form-select-sm" autocomplete="off" data-target-column-index="1" data-target-table="datatbleWithFilter" data-hs-tom-select-options='{ "searchInDropdown": false, "hideSearch": true, "dropdownWidth": "10rem" }'>
+                  <option value="null" selected>Họ tên</option>
+                  <option value="1">Họ tên 1</option>
+                  <option value="2">Họ tên 2</option>
+                  <option value="3">Họ tên 3</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-auto mb-2">
+              <div class="tom-select-custom">
+                <select class="js-select js-datatable-filter form-select form-select-sm" autocomplete="off" data-target-column-index="1" data-target-table="datatbleWithFilter" data-hs-tom-select-options='{ "searchInDropdown": false, "hideSearch": true, "dropdownWidth": "10rem" }'>
+                  <option value="null" selected>Lớp</option>
+                  <option value="1">Lớp 1</option>
+                  <option value="2">Lớp 2</option>
+                  <option value="3">Lớp 3</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-auto mb-2">
+              <div class="tom-select-custom">
+                <select class="js-select js-datatable-filter form-select form-select-sm" autocomplete="off" data-target-column-index="1" data-target-table="datatbleWithFilter" data-hs-tom-select-options='{ "searchInDropdown": false, "hideSearch": true, "dropdownWidth": "10rem" }'>
+                  <option value="null" selected>Khoá</option>
+                  <option value="1">Khoá 1</option>
+                  <option value="2">Khoá 2</option>
+                  <option value="3">Khoá 3</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-auto mb-2">
+          .row.justify-content-between.align-items-center
+            .col-auto
+              +Button({ className: 'btn-sm', title: 'Thêm mới', icon: 'bi-plus ms-2' })
+            .col-auto
+              +Button({ className: 'btn-sm', title: 'Upload Excel', icon: 'bi-cloud-arrow-up ms-2' })
+        </div>
+      </div>
+    </div>
+
+    <div class="table-responsive datatable-custom">
+      <table id="datatbleWithFilter" class="js-datatable table table-borderless table-thead-bordered table-nowrap table-align-middle card-table" data-hs-datatables-options='{ "columnDefs": [{ "targets": [1], "orderable": false }], "order": [], "search": "#datatableWithFilterSearch", "isResponsive": true, "isShowPaging": false }'>
+        <thead class="thead-light">
+        <tr>
+          <th>#</th>
+          <th class="text-center">Mã thẻ</th>
+          <th>Thông tin cá nhân</th>
+          <th>Lớp</th>
+          <th>Khoa</th>
+          <th>Khoá</th>
+          <th>CMND</th>
+          <th>Giới tính</th>
+          <th>Thao tác</th>
+        </tr>
+        </thead>
+
+        <tbody>
+          each item in [1,2,3,4,5,6,7,8,9,10]
+            tr 
+              td= `#${item}`
+              td 
+                img.mb-2.mx-auto.d-block.mw-100(src="./assets/img/image-qr-code.png" alt="")
+                span.d-block.text-center ĐHXD23-8232
+              td 
+                span.d-flex.align-items-center.mb-1 Phạm Hoài Phương
+
+                span.d-flex.align-items-center.mb-1
+                  i.bi-phone.me-2
+                  |036 789 2524
+
+                span.d-flex.align-items-center.mb-1
+                  i.bi-envelope.me-2
+                  |Phuongphk32@gmail.com
+
+                span.d-flex.align-items-center
+                  i.bi-credit-card-2-front.me-2
+                  |0880837923
+
+              td Đồ Hoạ đa phương tiện
+              td Mỹ thuật ứng dụng
+              td K32
+              td 014280923823
+              td Nữ
+              td 
+                .row.flex-nowrap
+                  <span class="icon icon-soft-success icon-sm mx-1 hover-icon-soft-success">
+                    <i class="bi-eye"></i>
+                  </span>
+
+                  <span class="icon icon-soft-primary icon-sm mx-1 hover-icon-soft-primary">
+                    <i class="bi-pen"></i>
+                  </span>
+
+                  <span class="icon icon-sm mx-1 icon-soft-danger hover-icon-soft-danger">
+                    <i class="bi-trash"></i>
+                  </span>
+
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card-footer">
+      .row.justify-content-center.justify-content-md-between.align-items-center.flex-column.flex-md-row
+        .col-auto
+          .table-pagesize.d-flex.align-items-center.mb-2.mb-md-0
+            p.mb-0 Hiển thị
+            +Select({ classSelect: 'form-control-borderless', className: 'mx-2', options: dataPageSizeOptions })
+            p.mb-0 1 trang
+        .col-auto
+          +Pagination({})
+    </div>
+  </div>

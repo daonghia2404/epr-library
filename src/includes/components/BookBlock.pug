@@ -1,0 +1,26 @@
+mixin BookBlock({ image, title, link = '#', isFavorite })
+  .BookBlock.border
+    .BookBlock-image 
+      a(href=`${link}`) 
+        img(src=`${image}`, alt="")
+
+    a(href=`${link}`).BookBlock-title.text-dark= title 
+
+    .BookBlock-actions.d-flex.align-items-center.justify-content-center 
+      .BookBlock-actions-item.mx-1
+        if isFavorite
+          <span class="icon icon-primary icon-xs icon-circle">
+            <i class="bi-heart"></i>
+          </span>
+        else
+          <span class="icon icon-soft-primary icon-xs icon-circle hover-icon-soft-primary">
+            <i class="bi-heart"></i>
+          </span>
+      .BookBlock-actions-item.mx-1(data-bs-toggle="modal" data-bs-target="#BookDetailModal")
+        <span class="icon icon-soft-primary icon-xs icon-circle hover-icon-soft-primary">
+          <i class="bi-eye"></i>
+        </span>
+      .BookBlock-actions-item.mx-1
+        <span class="icon icon-soft-primary icon-xs icon-circle hover-icon-soft-primary">
+          <i class="bi-cart"></i>
+        </span>

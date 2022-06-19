@@ -1,0 +1,106 @@
+extends includes/layouts/Layout.pug
+
+block sidebar 
+  +Sidebar()
+
+block header 
+  +Header({ title: 'Lịch sử mượn sách' })
+
+block pages
+  <div class="card">
+    <div class="card-header">
+      <div class="row justify-content-between align-items-center flex-grow-1">
+        <div class="col-md-auto">
+          <div class="row align-items-center">
+            <div class="col-auto mb-2">
+              <form>
+                <div class="input-group-sm input-group-merge">
+                  <div class="input-group-prepend input-group-text">
+                    <i class="bi-search"></i>
+                  </div>
+
+                  <input type="text" class="js-form-search form-control" placeholder="Nhập từ khóa" aria-label="Nhập từ khóa" data-hs-form-search-options='{ "clearIcon": "#clearSearchResultsTable",  "toggleIconOnFocus": true, "activeClass": "focus" }'>
+
+                  <a class="input-group-append input-group-text" href="javascript:;">
+                    <i id="clearSearchResultsTable" class="bi-x-lg" style="display: none;"></i>
+                  </a>
+                </div>
+              </form>
+            </div>
+
+            <div class="col-auto mb-2">
+              <div class="tom-select-custom">
+                <select class="js-select js-datatable-filter form-select form-select-sm" autocomplete="off" data-target-column-index="1" data-target-table="datatbleWithFilter" data-hs-tom-select-options='{ "searchInDropdown": false, "hideSearch": true, "dropdownWidth": "10rem" }'>
+                  <option value="null" selected>Trạng thái</option>
+                  <option value="1">Hoàn thành</option>
+                  <option value="2">Chờ xử lý</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-auto mb-2">
+          <div class="d-flex justify-content-between align-items-center">
+            +Button({ className: 'btn-sm', title: 'Thêm mới', icon: 'bi-plus ms-2' })
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="table-responsive datatable-custom">
+      <table id="datatbleWithFilter" class="js-datatable table table-striped table-thead-bordered table-nowrap table-align-middle card-table" data-hs-datatables-options='{ "columnDefs": [{ "targets": [1], "orderable": false }], "order": [], "search": "#datatableWithFilterSearch", "isResponsive": true, "isShowPaging": false }'>
+        <thead class="thead-light">
+          <tr>
+            <th>#</th>
+            <th>Mã phiếu mượn</th>
+            <th>User name</th>
+            <th>Giá trị</th>
+            <th>Trạng thái</th>
+            <th>Thao tác</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          each item in [1,2,3,4,5,6,7,8,9,10]
+            tr 
+              td= `#${item}`
+              td TV32982304262353
+              td
+                strong.mb-2.d-block Thư viện trường
+                span.d-flex.align-items-center.mb-1
+                  i.me-2.bi-telephone
+                  |036 789 2524
+                span.d-flex.align-items-center.mb-1
+                  i.me-2.bi-calendar
+                  |28/05/2022
+                span.d-flex.align-items-center.mb-1
+                  i.me-2.bi-calendar-check
+                  |28/06/2022
+
+              td 136,000
+              td
+                if (item % 2 === 0)
+                  <span class="badge bg-success">Success</span>
+                else
+                  <span class="badge bg-warning">Warning</span>
+              td 
+                .row
+                  +Button({ title: 'Chi tiết', icon: 'me-2 bi-eye', styleType: 'btn-outline-secondary', className: 'w-auto btn-sm', iconReverse: true })
+
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card-footer">
+      .row.justify-content-center.justify-content-md-between.align-items-center.flex-column.flex-md-row
+        .col-auto
+          .table-pagesize.d-flex.align-items-center.mb-2.mb-md-0
+            p.mb-0 Hiển thị
+            +Select({ classSelect: 'form-control-borderless', className: 'mx-2', options: dataPageSizeOptions })
+            p.mb-0 1 trang
+        .col-auto
+          +Pagination({})
+    </div>
+  </div>

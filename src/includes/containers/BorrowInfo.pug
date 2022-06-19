@@ -1,0 +1,133 @@
+.BorrowInfo
+  .card 
+    .BorrowInfo-header.card-header.d-flex.align-items-center.justify-content-between
+      h4.card-header-title.mb-2.mb-sm-0 Thông tin đơn mượn  
+      .d-flex 
+        +Button({ title: 'In phiếu mượn', className: 'btn-sm mx-1 mx-sm-0 ms-sm-3', icon: 'ms-2 bi-printer' })
+        +Button({ title: 'Về trang chủ', className: 'btn-sm mx-1 mx-sm-0 ms-sm-3', icon: 'ms-2 bi-house', styleType: 'btn-outline-secondary' })
+
+    .BorrowInfo-body.card-body
+      .BorrowInfo-body-header.row.align-items-center.justify-content-between.mb-6
+        .col-lg-6.col-12
+          .BorrowInfo-body-header-item.d-flex.align-items-center.mb-4.mb-lg-0
+            .BorrowInfo-body-header-logo.me-2.d-flex.align-items-center
+              img(src="./assets/img/logo.svg" alt="").me-2
+              h4.mb-0 Trung tâm thư viện trường EPR Library
+
+        .col-lg-6.col-12
+
+          .BorrowInfo-body-header-item
+            p.d-flex.align-items-center.ms-lg-4.mb-2
+              i.bi-geo-alt.me-2
+              |21 Phạm Ngọc Thạch, Kim Liên, Đống Đa, Hà Nội
+
+            .d-flex.align-items-lg-center.flex-column.flex-lg-row
+              a(href="www.epr.com" target="_blank").ms-lg-4.d-block
+                p.d-flex.align-items-center.mb-2.text-body
+                  i.bi-globe2.me-2
+                  |www.epr.com
+
+              a(href="mailto: info@gmail.com").ms-lg-4.d-block
+                p.d-flex.align-items-center.mb-2.text-body
+                  i.bi-envelope.me-2
+                  |info@gmail.com
+
+              a(href="tel: 0367892524").ms-lg-4.d-block
+                p.d-flex.align-items-center.mb-2.text-body
+                  i.bi-telephone.me-2
+                  |036 789 2524
+
+      .BorrowInfo-body-main.row
+        .col-lg-4.col-12
+          .BorrowInfo-body-main-item.mb-4.mb-lg-0
+            .card 
+              .card-body 
+                h5 Thông tin cá nhân
+
+                .d-flex.align-items-center.justify-content-between.py-3.border-bottom
+                  p.d-flex.text-dark.align-items-center.mb-0
+                    i.me-2.bi-credit-card-2-front
+                    |Họ tên
+                  p.d-flex.text-dark.align-items-center.mb-0 Huỳnh Thanh Bình
+
+                .d-flex.align-items-center.justify-content-between.py-3.border-bottom
+                  p.d-flex.text-dark.align-items-center.mb-0
+                    i.me-2.bi-phone
+                    |Số điện thoại
+                  p.d-flex.text-dark.align-items-center.mb-0 0896457482
+
+                .d-flex.align-items-center.justify-content-between.py-3.border-bottom
+                  p.d-flex.text-dark.align-items-center.mb-0
+                    i.me-2.bi-envelope
+                    |Email
+                  p.d-flex.text-dark.align-items-center.mb-0 thanhbinh23@gmail.com
+
+                .d-flex.align-items-center.justify-content-between.py-3
+                  p.d-flex.text-dark.align-items-center.mb-0
+                    i.me-2.bi-geo-alt
+                    |Địa chỉ
+                  p.d-flex.text-dark.align-items-center.mb-0 236 Hoang Quoc Viet
+
+                .border-bottom.mb-3(style="margin: 0 -1.3125rem")
+
+                h5 Thông tin đơn mượn
+
+                .d-flex.align-items-center.justify-content-between.py-3.border-bottom
+                  p.d-flex.text-dark.align-items-center.mb-0
+                    i.me-2.bi-upc-scan
+                    |Mã đơn mượn
+                  p.d-flex.text-dark.align-items-center.mb-0 #220520061752159
+
+                .d-flex.align-items-center.justify-content-between.py-3.border-bottom
+                  p.d-flex.text-dark.align-items-center.mb-0
+                    i.me-2.bi-clock
+                    |Ngày mượn
+                  p.d-flex.text-dark.align-items-center.mb-0 23/05/2022 14:55
+
+                .d-flex.align-items-center.justify-content-between.py-3.border-bottom
+                  p.d-flex.text-dark.align-items-center.mb-0
+                    i.me-2.bi-clock
+                    |Ngày trả
+                  p.d-flex.text-dark.align-items-center.mb-0 23/05/2022 14:55
+
+                .d-flex.align-items-center.justify-content-between.py-3
+                  p.d-flex.text-dark.align-items-center.mb-0
+                    i.me-2.bi-info-square
+                    |Trạng thái
+                  <span class="badge bg-success">Hoàn thành</span>
+
+                .border-bottom.mb-3(style="margin: 0 -1.3125rem")
+
+                h5 Giá trị
+
+                .d-flex.align-items-center.justify-content-between.py-3
+                  p.d-flex.text-dark.align-items-center.mb-0
+                    i.me-2.bi-currency-dollar
+                    |Giá trị đơn mượn
+                  p.d-flex.text-dark.align-items-center.mb-0 280,300
+
+        .col-lg-8.col-12
+          .BorrowInfo-body-main-item
+            <div class="card overflow-hidden border-0">
+              <div class="card-body" style="padding: 0; overflow: auto;">
+                <table style="border-top-left-radius: 0.75rem; border-top-right-radius: 0.75rem;" class="table table-striped table-bordered table-nowrap table-align-middle card-table" data-hs-datatables-options='{ "isResponsive": true, "isShowPaging": false }'>
+                  thead 
+                    tr 
+                      th #
+                      th Mã sách
+                      th Tên Sách
+                      th Số lượng
+                  tbody 
+                    each item in [1,2,3,4,5,6]
+                      tr 
+                        td= `#${item}`
+                        td IS928 9203 82032
+                        td Bố Già - Mario Puzo
+                        td 1
+                </table>
+              </div>
+
+              .card-footer.border.border-top-0.d-flex.align-items-center.justify-content-between(style="padding: .75rem .75rem; border-bottom-left-radius: 0.75rem; border-bottom-right-radius: 0.75rem;")
+                p.mb-0.text-dark #[strong Tổng số đầu sách: 5]
+                p.mb-0.text-dark #[strong Tổng số lượng: 11]
+            </div>

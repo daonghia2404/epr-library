@@ -1,0 +1,8 @@
+mixin Select({ className = '', classSelect = '', placeholder = '', options = [], dropdownWidth = "10rem" })
+  .tom-select-custom(class=`${className}`)
+    select.js-select.form-select(autocomplete="off" class=`${classSelect}` data-hs-tom-select-options=`{ "placeholder": "${placeholder}", "hideSearch": true, "dropdownWidth": "${dropdownWidth}" }`)
+      if (placeholder)
+        option(value=``)= placeholder
+
+      each item in options
+        option(value=`${item.value}`)= item.label

@@ -1,0 +1,8 @@
+.BorrowInfo {
+  &-header {
+    @media (max-width: 575px) {
+      flex-direction: column;
+    }
+  }
+
+}

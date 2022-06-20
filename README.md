@@ -1,4 +1,4 @@
-# https://daonghia2404.github.io/epr-library/
+# https://daonghia2404.github.io/epr-library/dist/index.html
 
 # Code Style
 

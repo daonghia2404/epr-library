@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title List Pages
+  body 
+    -
+      const dataLinks = [
+        { link: '1.dang-nhap.html', title: '1. Đăng nhập' },
+        { link: 'index.html', title: '2. Home (Tra cứu thư viện)' },
+        { link: '3.gio-sach-tao-phieu-muon.html', title: '3. Giỏ sách | Tạo phiếu mượn' },
+        { link: '3.gio-sach-tao-phieu-muon.html', title: '3.1 Giỏ sách | Tạo phiếu mượn thành công (Bấm vào button Tạo)' },
+        { link: '3.2.thong-tin-muon-sach.html', title: '3.2 Thông tin mượn sách' },
+        { link: '4.list-danh-sach-yeu-thich.html', title: '4. List sách yêu thích' },
+        { link: '5.thong-tin-tai-khoan-lich-su-muon-sach.html', title: '5. Thông tin tài khoản | Lịch sử mượn sách' },
+        { link: 'index.html', title: '6. Chi tiết sách (Bấm vào icon eye trong Book Box)' },
+        { link: '7.quan-ly-vi-tri.html', title: '7. Quản lý vị trí' },
+        { link: '8.quan-ly-doc-gia.html', title: '8. Quản lí độc giả' },
+      ];
+
+    each item in dataLinks
+      a(href=`${item.link}` target="_blank")= item.title
+      br

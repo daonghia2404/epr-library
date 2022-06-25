@@ -971,6 +971,12 @@ template {
 table.table thead th {
   font-weight: 700 !important; }
 
+.main .content {
+  padding: 32px; }
+
+.color-white {
+  color: #fff !important; }
+
 .AuthLayout-elements {
   position: fixed;
   right: 16px;
@@ -1049,15 +1055,17 @@ table.table thead th {
 .BookBlock {
   padding: 30px 36px;
   border-radius: 5px;
-  margin-bottom: 0.75rem; }
+  margin-bottom: 0.75rem;
+  height: 100%; }
   @media (max-width: 1440px) {
     .BookBlock {
       padding: 24px 16px; } }
   .BookBlock-image {
     max-width: 170px;
-    max-height: 170px;
+    height: 170px;
     margin: 0 auto 8px;
     text-align: center;
+    border-radius: 6px;
     display: flex; }
     .BookBlock-image img {
       max-width: 100%;
@@ -1065,8 +1073,10 @@ table.table thead th {
       object-fit: contain;
       object-position: center;
       margin: auto; }
+    .BookBlock-image img {
+      border-radius: 6px; }
     .BookBlock-image a {
-      display: block;
+      display: flex;
       width: 100%; }
   .BookBlock-title {
     font-size: 12px;
@@ -1076,6 +1086,54 @@ table.table thead th {
   .BookBlock-actions-item {
     cursor: pointer;
     border-radius: 50%; }
+
+aside.navbar {
+  background: #0087D2;
+  border-color: #0892DF; }
+  aside.navbar .navbar-brand {
+    border-bottom: 1px solid #0892DF; }
+  aside.navbar .navbar-aside-toggler {
+    background-color: #fff;
+    border: 0.0625rem solid rgba(231, 234, 243, 0.7);
+    color: #677788; }
+  aside.navbar .nav-vertical.nav-pills .nav-collapse::before {
+    background-color: rgba(231, 234, 243, 0.7) !important; }
+  aside.navbar .nav-item .nav-link {
+    color: #fff !important; }
+  aside.navbar .navbar-vertical-footer {
+    border-top-color: #0892DF; }
+    aside.navbar .navbar-vertical-footer button {
+      color: #fff !important; }
+
+header.navbar {
+  background: #0087D2; }
+  header.navbar .avatar-status,
+  header.navbar .btn-status {
+    border-color: #fff; }
+  header.navbar .Header-title {
+    color: #fff; }
+  header.navbar .Header-search {
+    border-radius: 5px;
+    background: #fff; }
+    header.navbar .Header-search-control {
+      border-color: rgba(231, 234, 243, 0.7) !important; }
+    header.navbar .Header-search .form-select,
+    header.navbar .Header-search .form-control {
+      background-color: #fff !important;
+      color: #1e2022 !important; }
+    header.navbar .Header-search .tom-select-custom .form-select {
+      border-top-left-radius: 5px !important;
+      border-bottom-left-radius: 5px !important; }
+    header.navbar .Header-search .tom-select-custom .ts-dropdown, header.navbar .Header-search .tom-select-custom .ts-input, header.navbar .Header-search .tom-select-custom .ts-input input {
+      color: #677788; }
+    header.navbar .Header-search .tom-select-custom .ts-dropdown .active, header.navbar .Header-search .tom-select-custom .ts-dropdown .create:hover, header.navbar .Header-search .tom-select-custom .ts-dropdown .option:hover {
+      color: #1e2022;
+      background-color: rgba(189, 197, 209, 0.3); }
+    header.navbar .Header-search .tom-select-custom .ts-dropdown .option::after {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 110 110' fill='%23377dff'%3e%3cpath d='M98.1,16.2c-2.5-2.3-6.4-2.2-8.7,0.2L36.7,70.1l-13-15.5c-2.9-3.5-7.9-4.1-11.1-1.4c-2.9,2.4-3.5,6.6-1.4,10.1l16.5,28c3.2,5.4,10.8,5.8,14.5,0.8l56.5-67.3C100.7,22.1,100.4,18.5,98.1,16.2z'/%3e%3c/svg%3e"); }
+    header.navbar .Header-search-btn {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px; }
 
 .BorrowBooksSuccessModal-icon {
   width: 32px;

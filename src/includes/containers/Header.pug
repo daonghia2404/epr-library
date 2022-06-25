@@ -1,5 +1,5 @@
 mixin Header({ title })
-  <header id="header" class="navbar navbar-expand-lg navbar-fixed navbar-height navbar-container navbar-bordered bg-white">
+  <header id="header" class="navbar navbar-expand-lg navbar-fixed navbar-height navbar-container navbar-bordered">
     <div class="navbar-nav-wrap">
       <a class="navbar-brand" href="./index.html" aria-label="Front">
         <img class="navbar-brand-logo" src="./assets/img/logo.svg" alt="Logo" data-hs-theme-appearance="default">
@@ -60,7 +60,7 @@ mixin Header({ title })
             </div>
           </div>
 
-        .Header-search.border.me-2.d-none.d-lg-block 
+        .Header-search.me-2.d-none.d-lg-block 
           <div class="input-group">
             +Select({ 
               classSelect: 'form-select-sm form-control-borderless',
@@ -85,7 +85,7 @@ mixin Header({ title })
               </div>
             </div>
 
-            <a class="btn btn-primary btn-sm" href="javascript:;">
+            <a class="Header-search-btn btn btn-danger btn-sm" href="javascript:;">
               <i class="bi-search me-2"></i>
               |Tìm kiếm
             </a>
@@ -95,7 +95,7 @@ mixin Header({ title })
           <li class="nav-item d-none d-sm-inline-block">
             <div class="dropdown">
               <button type="button" class="btn btn-ghost-secondary btn-icon rounded-circle" id="navbarNotificationsDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-dropdown-animation>
-                <i class="bi-bell"></i>
+                <i class="color-white bi-bell"></i>
                 <span class="btn-status btn-sm-status btn-status-danger"></span>
               </button>
 

@@ -1,0 +1,30 @@
+aside.navbar {
+  background: $lochmara;
+  border-color: $cerulean;
+
+  .navbar-brand {
+    border-bottom: 1px solid $cerulean;
+  }
+
+  .navbar-aside-toggler {
+    background-color: #fff;
+    border: 0.0625rem solid rgba(231, 234, 243, .7);
+    color: #677788;
+  }
+
+  .nav-vertical.nav-pills .nav-collapse::before {
+    background-color: rgba(231, 234, 243, .7) !important;
+  }
+
+  .nav-item .nav-link {
+    color: $white !important;
+  }
+
+  .navbar-vertical-footer {
+    border-top-color: $cerulean;
+
+    button {
+      color: $white !important;
+    }
+  }
+}

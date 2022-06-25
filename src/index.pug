@@ -9,8 +9,17 @@ block header
 block pages
   .row 
     each item in [1,2,3,4,5,6,7,8,9,10,11,12]
-      .col-lg-2.col-md-3.col-sm-4.col-6
-        +BookBlock({ title: 'Bố Già - Mario Puzo', image: './assets/img/image-sample-book.png' })
+      .col-lg-2.col-md-3.col-sm-4.col-6.mb-4
+        if item === 2
+          +BookBlock({ title: 'Bố Già - Mario Puzo', image: 'https://images.nxbhanoi.com.vn/Thumbs/2022/4/6/image-20220406144022965.png' })
+        else if item === 3
+          +BookBlock({ title: 'Bố Già - Mario Puzo', image: 'https://images.nxbhanoi.com.vn/Thumbs/2022/4/26/image-20220426090951274.jpg' })
+        else if item === 4
+          +BookBlock({ title: 'Bố Già - Mario Puzo', image: 'https://images.nxbhanoi.com.vn/Picture/2022/1/28/image-20220128105009392.jpg' })
+        else if item === 5
+          +BookBlock({ title: 'Bố Già - Mario Puzo', image: 'https://images.nxbhanoi.com.vn/Picture/2022/4/22/image-202204221817118.png' })
+        else
+          +BookBlock({ title: 'Bố Già - Mario Puzo', image: './assets/img/image-sample-book.png' })
 
   .d-flex.justify-content-end.mt-2 
     +Pagination({})

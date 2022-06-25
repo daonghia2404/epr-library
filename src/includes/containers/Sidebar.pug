@@ -1,9 +1,9 @@
 mixin Sidebar()
-  <aside class="js-navbar-vertical-aside navbar navbar-vertical-aside navbar-vertical navbar-vertical-fixed navbar-expand-xl navbar-bordered bg-white  ">
+  <aside class="js-navbar-vertical-aside navbar navbar-vertical-aside navbar-vertical navbar-vertical-fixed navbar-expand-xl navbar-bordered">
     <div class="navbar-vertical-container">
       <div class="navbar-vertical-footer-offset">
 
-        <a class="navbar-brand border-bottom" href="./index.html" aria-label="Front" style="margin-right: 0;">
+        <a class="navbar-brand" href="./index.html" aria-label="Front" style="margin-right: 0;">
           <img class="navbar-brand-logo" src="./assets/img/logo.svg" alt="Logo" data-hs-theme-appearance="default">
           <img class="navbar-brand-logo" src="./assets/img/logo.svg" alt="Logo" data-hs-theme-appearance="dark">
           <img class="navbar-brand-logo-mini" src="./assets/img/favicon.svg" alt="Logo" data-hs-theme-appearance="default">
@@ -23,7 +23,7 @@ mixin Sidebar()
               each group in dataMenuSidebar.groups
                 div(id=`${group.groupId}`)
                   if (group.title)
-                    span.dropdown-header.mt-4= group.title
+                    span.dropdown-header.mt-4.color-white= group.title
                     small.bi-three-dots.nav-subtitle-replacer
 
                   each item in group.menu
